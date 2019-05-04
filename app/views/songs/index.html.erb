@@ -1,5 +1,3 @@
-<ul>
-  <% @songs.each do |a|%>
-    <li><a href="/songs/<%=a.id%>""><%=a.name%></a></li>
-  <% end %>
-</ul>
+<% @songs.each do |song| %>
+	<p><%= song.name %></p>
+<% end %>
