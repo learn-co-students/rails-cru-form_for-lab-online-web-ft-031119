@@ -36,12 +36,12 @@ describe 'form' do
     @genre = Genre.create(name: "My Genre")
   end
 
-  xit 'shows a new form that submits content and redirects and prints out params' do
+  it 'shows a new form that submits content and redirects and prints out params' do
     visit new_song_path
 
     fill_in 'song[name]', with: "My song name"
-    #fill_in 'song[artist_id]', with: @artist.id
-    #fill_in 'song[genre_id]', with: @genre.id
+    fill_in 'song[artist_id]', with: @artist.id, disabled: true
+    fill_in 'song[genre_id]', with: @genre.id, disabled: true
 
     click_on "Create Song"
 
